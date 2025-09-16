@@ -1,0 +1,8 @@
+streamlit
+langchain
+faiss-cpu
+youtube-transcript-api
+sentence-transformers
+transformers
+torch
+langchain-community
