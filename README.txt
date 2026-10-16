@@ -1,108 +1,90 @@
-# RAGify Transcript — AI-Powered Video Q&A Assistant
+# RAGify Transcript
+## AI-Powered Video Q&A Assistant
 
-RAGify Transcript is a Retrieval-Augmented Generation (RAG) application that enables context-aware question answering over video transcripts. It combines semantic embeddings, FAISS vector search, and a lightweight language model to retrieve relevant information and generate concise, transcript-grounded responses.
+**RAGify Transcript** is a Retrieval-Augmented Generation (RAG) application that enables context-aware question answering over video transcripts. It combines semantic embeddings, FAISS vector search, and Flan-T5 Small to retrieve relevant information and generate concise, transcript-grounded responses.
 
-The application also filters off-topic queries to keep responses relevant to the uploaded content.
+---
 
-## Key Features
+## 🚀 Key Features
 
-- **Transcript Processing:** Upload, preprocess, and split transcripts into manageable text chunks.
-- **Semantic Retrieval:** Retrieve relevant context using FAISS vector search and MiniLM-L6-v2 embeddings.
-- **Contextual Answer Generation:** Generate responses using Flan-T5 Small through HuggingFace Transformers.
-- **Relevance Filtering:** Restrict responses to questions related to the transcript content.
-- **Prompt Engineering:** Structure prompts to improve answer clarity and conciseness.
-- **Interactive Interface:** Access the assistant through a Streamlit application.
+- **Transcript Processing** — Upload, preprocess, and split transcripts into manageable text chunks.
+- **Semantic Search** — Retrieve relevant passages using MiniLM-L6-v2 embeddings and FAISS.
+- **AI-Powered Answers** — Generate contextual responses using Flan-T5 Small.
+- **Relevance Filtering** — Filter out questions unrelated to the transcript.
+- **Prompt Engineering** — Improve response clarity and conciseness.
+- **Interactive Interface** — Use the assistant through Streamlit.
 
-## Technology Stack
+## 🛠️ Technology Stack
 
-| Category | Technologies |
+| Technology | Purpose |
 |---|---|
-| Language | Python |
-| Application Framework | Streamlit |
-| RAG Framework | LangChain |
-| Embedding Model | MiniLM-L6-v2 |
-| Language Model | Flan-T5 Small |
-| Vector Search | FAISS |
-| NLP Libraries | HuggingFace Transformers, SentenceTransformers |
+| Python | Core application |
+| Streamlit | User interface |
+| LangChain | RAG pipeline integration |
+| MiniLM-L6-v2 | Text embeddings |
+| FAISS | Vector similarity search |
+| Flan-T5 Small | Answer generation |
+| HuggingFace Transformers | Model inference |
+| SentenceTransformers | Embedding generation |
 
-## System Architecture
-
-The application follows a retrieval-and-generation pipeline:
+## 🏗️ System Architecture
 
 ```mermaid
 flowchart TD
-    A[Transcript Upload] --> B[Text Preprocessing & Chunking]
-    B --> C[MiniLM-L6-v2 Embeddings]
-    C --> D[FAISS Vector Index]
-    D --> E[Semantic Retrieval]
+    A[Transcript Upload] --> B[Text Preprocessing]
+    B --> C[Text Chunking]
+    C --> D[MiniLM Embeddings]
+    D --> E[FAISS Vector Search]
     E --> F[Relevance Filtering]
     F --> G[Prompt Construction]
     G --> H[Flan-T5 Small]
     H --> I[Contextual Answer]
 ```
 
-## Getting Started
+## ⚙️ Installation & Setup
 
-### Prerequisites
-
-- Python installed
-- Git
-- Access to the required model files or the ability to download them
-
-### Installation
-
-Clone the repository:
+**1. Clone the repository**
 
 ```bash
 git clone https://github.com/Abhi-it14/ragify-transcript.git
 cd ragify-transcript
 ```
 
-Install the dependencies:
+**2. Install dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Launch the application:
+**3. Launch the application**
 
 ```bash
 streamlit run app.py
 ```
 
-Open the local URL displayed in your terminal to interact with the assistant.
+Open the local URL provided in your terminal to start using the assistant.
 
-## Implementation Highlights
-
-- Processes transcripts into chunks suitable for semantic retrieval.
-- Uses dense embeddings to identify contextually relevant transcript passages.
-- Integrates vector search with language-model generation in a single pipeline.
-- Applies relevance filtering to reduce responses to unrelated queries.
-- Uses a modular workflow that can be extended with additional transcript sources and language models.
-
-### Reported Testing Results
-
-The original project notes report the following results:
+## 📊 Project Highlights
 
 - **50+ transcript chunks** processed for contextual retrieval.
-- **85%+ answer accuracy** during testing.
-- **Under one second** query response time with FAISS indexing.
+- **85%+ reported answer accuracy** during testing.
+- **Under 1 second reported query response time** with FAISS indexing.
 
-These figures are reported project results; reproducibility depends on the evaluation dataset, hardware, retrieval configuration, and measurement methodology.
+*Reported figures should be interpreted in the context of the project's original testing setup.*
 
-## Future Enhancements
+## 🔮 Future Enhancements
 
-- Support for YouTube transcript extraction and additional document formats.
-- Integration with more capable language models, including LLaMA and Mistral.
+- YouTube transcript extraction and support for additional document formats.
+- Integration with more advanced language models.
 - Improved retrieval evaluation and answer-quality testing.
-- Cloud deployment and performance optimization for larger workloads.
-
-## Project Objective
-
-RAGify Transcript demonstrates how semantic search, vector indexing, and language-model generation can be combined to build a focused question-answering assistant over unstructured text.
-
-**Core capabilities:** Retrieval-Augmented Generation · Semantic Search · NLP · Vector Databases · Prompt Engineering · Streamlit
+- Cloud deployment and scalability improvements.
 
 ---
 
-**Repository:** [Abhi-it14/ragify-transcript](https://github.com/Abhi-it14/ragify-transcript)
+## 🎯 Project Objective
+
+Demonstrate how **Retrieval-Augmented Generation, semantic search, vector indexing, and language models** can work together to build a focused question-answering assistant over unstructured text.
+
+**Core Skills:** Python · NLP · RAG · FAISS · HuggingFace · Semantic Search · Streamlit
+
+**Repository:** [RAGify Transcript on GitHub](https://github.com/Abhi-it14/ragify-transcript)
