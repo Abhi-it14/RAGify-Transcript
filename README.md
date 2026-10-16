@@ -87,13 +87,5 @@ These are illustrative figures — your results will vary by dataset, model, and
 - Add reranking or supervised fine-tuning for improved precision
 - Add automated evaluation and benchmark scripts
 
-## License & Attribution
-
-Include a license file if you want to open-source this project (e.g., MIT). Models used are provided by SentenceTransformers and HuggingFace — follow their licenses and terms when distributing.
-
 ---
-
-If you want, I can:
-- Replace the Streamlit UI entrypoint, add badges, or include example screenshots
-- Add a brief quickstart with a sample transcript and expected outputs
 
